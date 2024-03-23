@@ -1,5 +1,5 @@
 import logo from "./images/myprofilepic_circle-removebg.png";
-import bannerImg from "./images/myprofilepic_bg_black-removebg.png";
+import bannerImg from "./images/mypic_bgremoved.png";
 import projectOne from "./images/projects/projectOne.jpg";
 import projectTwo from "./images/projects/projectTwo.jpg";
 import projectThree from "./images/projects/projectThree.jpeg";
