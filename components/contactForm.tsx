@@ -97,12 +97,8 @@ const ContactForm = () => {
         Let&apos;s work together
       </h3>
       <p className="text-white/80">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore laborum
-        dolor ipsa reprehenderit? Accusamus quasi dolorum mollitia aspernatur
-        maiores neque vitae, voluptates qui, porro nostrum voluptas, et
-        praesentium fugit illum!
+        If you wanna get in touch, talk to me about a project collaboration or have any query, feel free to fill out the form below or drop an inbox.
       </p>
-
      <>
         {success ? <SuccessMessage status={status} /> :  (<form onSubmit={handleSubmit}>
         <div className="space-y-4">

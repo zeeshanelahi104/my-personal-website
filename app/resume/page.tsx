@@ -1,7 +1,7 @@
 "use client";
 import PageLayout from "@/components/PageLayout";
 import { Tabs, TabsTrigger, TabsContent, TabsList } from "@/components/ui/tabs";
-import { Briefcase, Calendar, Code2, GraduationCap, User } from "lucide-react";
+import { Briefcase, Calendar, GraduationCap, User } from "lucide-react";
 import React from "react";
 import { motion } from "motion/react";
 import { Badge } from "@/components/ui/badge";
@@ -9,7 +9,6 @@ import { Badge } from "@/components/ui/badge";
 const tabMenu = [
   { title: "Experience", value: "experience", icon: Briefcase },
   { title: "Education", value: "education", icon: GraduationCap },
-  { title: "Skills", value: "skills", icon: Code2 },
   { title: "About me", value: "about", icon: User },
 ];
 
@@ -19,35 +18,21 @@ const tabsContent = {
     items: [
       {
         role: "Fullstack Developer",
-        company: "Google",
-        period: "2022 - Present",
         Description:
-          "Fullstack Developer with 1 year of experience in building websites and web applications. I specialize in HTML, CSS, JavaScript, Node.js, Express, and MongoDB.",
-        highlights: [" React", "Next.js", "TypeScript", "Team Leasdership"],
+          "I learnt Fullstack Development with experience of building different websites and web applications involving the use of different technologies such as Next.js, TypeScript, JavaScript, Tailwind CSS, HTML.",
+        highlights: ["React", "Next.js", "TypeScript","Tailwind CSS", "Team Leasdership"],
       },
       {
         role: "Frontend Developer",
-        company: "Google",
-        period: "2020 - 2021",
         Description:
-          "Frontend Developer with 1 year of experience in building websites and web applications. I specialize in HTML, CSS, and JavaScript.",
+          "I learntFrontend Developer by building websites and web applications. I specialize in HTML, CSS, and JavaScript.",
         highlights: ["HTML", "CSS", "JavaScript", "Team Leasdership"],
       },
       {
         role: "OOP Developer",
-        company: "Google",
-        period: "2021 - 2022",
         Description:
-          "OOP Developer with 1 year of experience in building websites and web applications. I specialize in HTML, CSS, JavaScript, Node.js, Express, and MongoDB.",
-        highlights: ["C", "C++", "C# (basic)"],
-      },
-      {
-        role: "Backend Developer",
-        company: "Google",
-        period: "2021 - 2022",
-        Description:
-          "Backend Developer with 1 year of experience in building websites and web applications. I specialize in HTML, CSS, JavaScript, Node.js, Express, and MongoDB.",
-        highlights: ["Python", "C", "C++"],
+          "OOP Developer woorking with C, C++, C# and Python. I have experience in building different projects and applications.",
+        highlights: ["C", "C++", "C# (basic)", "Python (Intermediate)"],
       },
     ],
   },
@@ -55,6 +40,15 @@ const tabsContent = {
   education: {
     title: "Educational Background",
     items: [
+      {
+        degree: "Bachelors of Computer Science",
+        period: "Present-2027",
+        Description:
+          "Currently persuing bachelors in CS and Robusting my skills in the emerging field of Computer Science and learning new technologies",
+        highlights: [
+          "Programming Fundamental","ICT", "Assembly Language", "Discrete Structures", "Digital Logic Design", "Calculus & Analytical Geometry", "Linear Algebra", "Applied Physics" 
+        ],
+      },
       {
         degree: "Intermediate in Computer Science",
         instituation: "Govt. Graduate College",
@@ -69,40 +63,16 @@ const tabsContent = {
         ],
       },
       {
-        degree: "Matriculation Biology",
+        degree: "Matriculation in Biology",
         instituation: "Govt. Girls MC School",
         period: "2019 - 2021",
         Description:
-          "Started building my base in the emerging field of computer science",
+          "Learnt a lot about different branches of Science such as Biology, Chemistry,Mathematics, Physics and many others",
         highlights: [
           "A+ Grade",
           "Topper of the school",
           "One of the best Students of the year",
         ],
-      },
-    ],
-  },
-
-  skill: {
-    title: "Technical Skills",
-    items: [
-      {
-        Name: "React",
-        Description:
-          "I have worked on a variety of projects and have mastered the following technologies",
-        Skills: ["React", "Next.js", "TypeScript", "Team Leasdership"],
-      },
-      {
-        Name: "Node.js",
-        Description:
-          "I have worked on a variety of projects and have mastered the following technologies",
-        Skills: ["React", "Next.js", "TypeScript", "Team Leasdership"],
-      },
-      {
-        Name: "MongoDB",
-        Description:
-          "I have worked on a variety of projects and have mastered the following technologies",
-        Skills: ["React", "Next.js", "TypeScript", "Team Leasdership"],
       },
     ],
   },
@@ -177,15 +147,7 @@ const resumePage = () => {
                           <h3 className="text-lg font-semibold">
                             {item?.role}
                           </h3>
-                          <p className="text-muted-foreground">
-                            {item?.company}
-                          </p>
                         </div>
-                      </div>
-
-                      <div className="flex items-center text-muted-foreground">
-                        <Calendar className="h-4 w-4 mr-2" />
-                        {item?.period}
                       </div>
                     </div>
                     <p className="mb-4 text-white">{item?.Description}</p>
@@ -251,101 +213,43 @@ const resumePage = () => {
               </div>
             </TabsContent>
 
-            <TabsContent value="skills">
-              <motion.h2
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-2xl font-bold mb-6 text-lightSky"
-              >
-                {tabsContent.skill.title}
-              </motion.h2>
-
-              <div className="space-y-6 ">
-                {tabsContent?.skill?.items.map((item, index) => (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 * index }}
-                    key={index}
-                    className="border rounded-lg border-lightSky/20 p-6  hover:border-lightSky/30 hover:bg-lightSky/5 "
-                  >
-                    <div className="flex justify-between items-start mb-4">
-                      <div className="flex items-start justify-between mb-4">
-                        <div>
-                          <h3 className="text-lg font-semibold">
-                            {item?.Name}
-                          </h3>
-                        </div>
-                      </div>
-                    </div>
-                    <p className="mb-4 text-white">{item?.Description}</p>
-
-                    <div className="flex flex-wrap gap-2">
-                      {item?.Skills.map((skills, i) => (
-                        <Badge key={i} variant="secondary">
-                          {skills}
-                        </Badge>
-                      ))}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </TabsContent>
-
             <TabsContent value="about">
-              <motion.h2
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-2xl font-bold mb-6 text-lightSky"
-              >
-                {tabsContent.about.title}
-              </motion.h2>
-
-              <div className="space-y-6 ">
-                {tabsContent?.education?.items.map((item, index) => (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 * index }}
-                    key={index}
-                    className="border rounded-lg border-lightSky/20 p-6  hover:border-lightSky/30 hover:bg-lightSky/5 "
-                  >
-                    <p className="text-white/85 text-lg">
-                      {tabsContent.about.bio}
-                    </p>
-
-                    <div className="space-y-4 pt-2">
-                      <div>
-                        <h3 className="text-lg font-semibold mb-2">
-                          Interests
-                        </h3>
-                        <div className="flex flex-wrap gap-2">
-                          {tabsContent.about.interests.map((interest, i) => (
-                            <Badge key={i} variant="secondary">
-                              {interest}
-                            </Badge>
-                          ))}
-                        </div>
+                <motion.h2
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-2xl font-bold mb-6 text-lightSky"
+                >
+                  {tabsContent.about.title}
+                </motion.h2>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="border rounded-lg border-lightSky/20 p-6"
+                >
+                  <p className="mb-6 text-lg">{tabsContent.about.bio}</p>
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">Interests</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {tabsContent.about.interests.map((interest, i) => (
+                          <Badge key={i} variant="secondary">
+                            {interest}
+                          </Badge>
+                        ))}
                       </div>
                     </div>
-
-                    <div className="space-y-4 pt-2">
-                      <div>
-                        <h3 className="text-lg font-semibold mb-2">
-                          Languages
-                        </h3>
-                        <div className="flex flex-wrap gap-2">
-                          {tabsContent.about.Languages.map((Language, i) => (
-                            <Badge key={i} variant="secondary">
-                              {Language}
-                            </Badge>
-                          ))}
-                        </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">Languages</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {tabsContent.about.Languages.map((language, i) => (
+                          <Badge key={i} variant="secondary">
+                            {language}
+                          </Badge>
+                        ))}
                       </div>
                     </div>
-                  </motion.div>
-                ))}
-              </div>
+                  </div>
+                </motion.div>
             </TabsContent>
           </div>
         </Tabs>

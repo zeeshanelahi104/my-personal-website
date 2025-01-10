@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 const HomeDescription = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
   const description =
-    "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore ma.";
+    " A dedicated Computer Scientist & tech enthusiast with strong passion for web and app development. Constantly driven by curiosity and a love for exploring innovative tools and techniques. Currently pursuing Bachelor's degree in Computer Science.";
 
   const { displayedText, isComplete } = useTypeWriter(description, 30);
 
@@ -17,14 +17,13 @@ const HomeDescription = () => {
 
   return (
     <motion.p
-      className="w-auto font-normal leading-7 mb-6 min-h-30"
+      className="w-auto font-normal leading-7 mb-12 min-h-30"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1, duration: 0.5 }}
     >
       {hasLoaded ? (
-        displayedText.split("").map((char, index) =>
-
+        displayedText.split("").map((char, index) => (
           <motion.span
             key={index}
             initial={{ color: "rgb(156 165 175)" }}
@@ -32,11 +31,11 @@ const HomeDescription = () => {
               color: isComplete ? " rgb(255 255 255)" : "rgb(156 165 175)",
             }}
             transition={{ duration: 0.5, delay: index * 0.03 }}
-            >
+          >
             {char}
-
           </motion.span>
-        )) : (
+        ))
+      ) : (
         <span>{description}</span>
       )}
     </motion.p>

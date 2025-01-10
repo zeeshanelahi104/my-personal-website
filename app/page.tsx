@@ -1,4 +1,4 @@
-// import { Container } from "lucide-react"
+"use client"
 import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
 import HomeDescription from "@/components/HomeDescription";
@@ -22,27 +22,28 @@ export default function Home() {
             <h1 className="text-lightSky text-5xl md:text-7xl tracking-normal">
               Memoona Saleem
             </h1>
-            </div>
+          </div>
 
-            <div className="w-full h-[120px] md:h-[140px] relative">
-              <div className="absolute top-0 left-0 w-full h-full">
-            <HomeDescription/>
-              </div>
+          <div className="w-full h-[160px] md:h-[140px] relative">
+            <div className="absolute top-0 left-0 w-full h-auto">
+              <HomeDescription />
             </div>
-
-            <Button
-              className="bg-transparent 
-            rounded-full border
-             border-lightSky/50
-               text-lightSky
-                hover:text-black
-                 hover:bg-hoverColor hoverEffect h-11 "
-            >
+            
+          </div>
+          <Button className="bg-transparent 
+            rounded-full border 
+            border-lightSky/50 
+            text-lightSky 
+            hover:bg-hoverColor 
+            hover:text-black hoverEffect"
+            onClick={() => window.open('resume.pdf', '_blank')}>
               Download CV <Download />
             </Button>
-            <SocialLinks />
-            <Statistics />
-          
+
+            
+
+          <SocialLinks />
+          <Statistics />
         </div>
         <Photo />
       </Container>

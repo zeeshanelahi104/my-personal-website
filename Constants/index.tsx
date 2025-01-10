@@ -1,5 +1,3 @@
-
-
 export const navbarData = [
   { title: "Home", href: "/" },
   { title: "Experience", href: "/experience" },
@@ -10,9 +8,8 @@ export const navbarData = [
 
 export const statsData = [
   { num: 1, title: "Year(s) of Experience" },
-  { num: 3, title: "Projects Completed" },
-  { num: 5, title: "Technologies mastered" },
-  { num: 10, title: "Happy Clients" },
+  { num: 4, title: "Projects Completed" },
+  { num: 6, title: "Technologies mastered" },
 ];
 
 export const experienceData = [
@@ -24,15 +21,10 @@ export const experienceData = [
   },
   {
     id: "02",
-    title: "Backend Developer",
-    description:
-      "Backend Developer with 1 year of experience in building websites and web applications. I specialize in Node.js, Express, and MongoDB.",
-  },
-  {
-    id: "03",
     title: "Fullstack Developer",
     description:
-      "Fullstack Developer with 1 year of experience in building websites and web applications. I specialize in HTML, CSS, JavaScript, Node.js, Express, and MongoDB.",
-  },
+      "I learnt Fullstack Development with experience by building different websites and web applications involving the use of different technologies such as Next.js, TypeScript, JavaScript, Tailwind CSS, HTML ",
+   },
+  
 ];
 
