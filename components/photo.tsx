@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
-import Mypicture from "../../public/Mypicture.jpg";
+import Mypicture from "../images/Mypicture.png";
 const photo = () => {
   const circleColors = ["#ff66b3"];
   const circleVariants = {
