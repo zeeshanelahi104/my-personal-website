@@ -5,10 +5,11 @@ import localFont from "next/font/local";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 
-const jetbrains = localFont({src: "./fonts/Jetbrains.woff2",
+const jetbrains = localFont({
+  src: "../app/fonts/Jetbrains.woff2",
   variable: "--font-jetbrains",
   weight: "100 800",
-})
+});
 export const metadata: Metadata = {
   title: "Memoona | CS Student",
   description: "Portfolio of Memoona Saleem",
@@ -21,15 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${jetbrains.variable} antialiased text-white`}
-      >
-        <Header/>
-        <StairTransition/>
-        <PageTransition>
-        {children}
-        </PageTransition>
-        
+      <body className={`${jetbrains.variable} antialiased text-white`}>
+        <Header />
+        <StairTransition />
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );
