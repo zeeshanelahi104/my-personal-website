@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import Mypicture from "../../hooks/images/Mypicture.jpg";
 
-
 const photo = () => {
   const circleColors = ["#ff66b3"];
   const circleVariants = {
@@ -14,7 +13,7 @@ const photo = () => {
       opacaity: 0,
     },
     animate: (index: number) => ({
-      strokeDasharray: ["15 120 25 25" , "16 25 92 72" , "4 250 22 22"],
+      strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
       rotate: [120, 360],
       opacity: 1,
       transition: {
