@@ -94,7 +94,7 @@ const tabsContent = {
       "Punjabi (Native)",
       "English (Professional level)",
       "Hindi (Intermediate)",
-      "Arabic(Internediate)",
+      "Arabic(Intermediate)",
     ],
   },
 };

@@ -28,7 +28,7 @@ export default function Home() {
           </div>
 
           {/* Description */}
-          <div className="w-full h-[160px] md:h-[140px] relative">
+          <div className="w-full h-[100px] md:h-[80px] relative md:mt-6">
             <div className="absolute top-0 left-0 w-full h-auto">
               <HomeDescription />
             </div>
