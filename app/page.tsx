@@ -3,7 +3,7 @@
 import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
 import HomeDescription from "@/components/HomeDescription";
-import Photo from "@/components/ui/photo";
+import Photo from "@/components/photo";
 import SocialLinks from "@/components/ui/socialLinks";
 import Statistics from "@/components/ui/statistics";
 import { Download } from "lucide-react";
@@ -12,10 +12,8 @@ export default function Home() {
   return (
     <div className="bg-bodyColor text-white/80 relative">
       <Container className="py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
-        
         {/* Left Section */}
         <div className="flex flex-col items-center md:items-start gap-3 md:gap-7 text-center md:text-start">
-          
           {/* Name & Profession */}
           <div>
             <h3 className="font-semibold tracking-wider mb-1">
@@ -44,7 +42,7 @@ export default function Home() {
             text-lightSky 
             hover:bg-hoverColor 
             hover:text-black hoverEffect"
-            onClick={() => window.open('resume.pdf', '_blank')}
+            onClick={() => window.open("resume.pdf", "_blank")}
           >
             Download CV <Download />
           </Button>
