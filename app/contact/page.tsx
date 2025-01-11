@@ -7,7 +7,7 @@ import React from "react";
 const infoData = [
   {
     title: "Phone",
-    details: "+92 300 4567198",
+    details: "+92 300 0000000",
     icon: <Phone />,
   },
   {
