@@ -22,7 +22,7 @@ const socialData = [
   {
     title: "Instagram",
     icon: <Instagram />,
-    href: "https://www.instagram.com/skycarlyofficial?igsh=a3lmd25pZHYyeHNq",
+    href: "https://www.instagram.com",
   },
 ];
 
