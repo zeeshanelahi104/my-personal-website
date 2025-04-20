@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 const HomeDescription = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
   const description =
-    " A Computer Science undergraduate student with a passion for software development and problem-solving.";
+  " Software Engineer holding a Bachelor of Science in Software Engineering, with 2+ years of professional experience as a MERN Stack Developer. Specialized in building high-performance, scalable web applications using React.js,Next.js, Node.js, MongoDB, and Express.js, with a proven track record of delivering exceptional end-to-end solutions.";
 
   const { displayedText, isComplete } = useTypeWriter(description, 30);
 

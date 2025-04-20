@@ -17,13 +17,13 @@ export default function Home() {
           {/* Name & Profession */}
           <div>
             <h3 className="font-semibold tracking-wider mb-1">
-              Computer Science
+              Software Engineer
             </h3>
             <h2 className="text-3xl md:text-5xl mb-2 text-white">
               Hello, I&apos;m
             </h2>
             <h1 className="text-lightSky text-5xl md:text-7xl tracking-normal">
-              Memoona Saleem
+              Zeeshan Elahi
             </h1>
           </div>
 
@@ -36,7 +36,7 @@ export default function Home() {
 
           {/* Download CV Button */}
           <Button
-            className="bg-transparent 
+            className="mt-14 bg-transparent 
             rounded-full border 
             border-lightSky/50 
             text-lightSky 

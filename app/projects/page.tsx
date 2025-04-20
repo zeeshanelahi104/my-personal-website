@@ -1,85 +1,91 @@
 "use client";
 import PageLayout from "@/components/PageLayout";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+// import { Card, CardContent } from "@/components/ui/card";
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+//   CarouselNext,
+//   CarouselPrevious,
+// } from "@/components/ui/carousel";
 
 import React from "react";
-import { useState } from "react";
-import Image from "next/image";
+// import { useState } from "react";
+// import Image from "next/image";
 
-import project1 from "./images/project1.png";
-import project2 from "./images/project2.png";
-import project3 from "./images/project3.png";
-import project4 from "./images/project4.png";
-import { Separator } from "@radix-ui/react-separator";
-import {
-  Tooltip,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import Link from "next/link";
-import { Github } from "lucide-react";
-import { Button } from "@/components/ui/button";
+// import project1 from "./images/project1.png";
+// import project2 from "./images/project2.png";
+// import project3 from "./images/project3.png";
+// import project4 from "./images/project4.png";
+// import { Separator } from "@radix-ui/react-separator";
+// import {
+//   Tooltip,
+//   TooltipProvider,
+//   TooltipTrigger,
+// } from "@/components/ui/tooltip";
+// import Link from "next/link";
+// import { Github } from "lucide-react";
+// import { Button } from "@/components/ui/button";
 
-const Projects = [
-  {
-    id: "01",
-    title: "Notes App",
-    category: "Full Stack",
-    description:
-      "A simple and aesthetic notes app that allows users to create, edit, and delete notes. Using the cool features of JavaScript to make it happen while using HTML and CSS to make it interactive for user.",
-    stack: ["HTML", "CSS", "JavaScript"],
-    image: project1,
-    githubUrl: "https://github.com/Memoona-tech/Notes-App",
-  },
-  {
-    id: "02",
-    title: "Analog Clock",
-    category: "Full Stack",
-    description:
-      "A simple and clean analogue clock that displays the current time. Using mathematical formula to measure the actual time but making it happen through JS, design provided by CSS.",
-    stack: ["HTML", "CSS", "JavaScript"],
-    image: project2,
-    githubUrl: "https://github.com/Memoona-tech/Analog-Clock",
-  },
-  {
-    id: "03",
-    title: "Weather App",
-    category: "Full Stack",
-    description:
-      "Weather app that allows users to search for the weather of any city in the world. Huge role of API and functionality of JavaScript combined with the beauty oh HTML and CSS. ",
-    stack: ["HTML", "CSS", "JavaScript" , "API"],
-    image: project3,
-    githubUrl: "https://github.com/Memoona-tech/Weather-App",
-  },
-  {
-    id: "04",
-    title: "Calculator App",
-    category: "Full Stack",
-    description:
-      "A simple and clean calculator app that performs basic arithmetic operations on interger as well as floating point numbers.",
-    stack: ["HTML", "CSS", "JavaScript"],
-    image: project4,
-    githubUrl: "https://github.com/Memoona-tech/Calculator",
-  },
-];
+// const Projects = [
+//   {
+//     id: "01",
+//     title: "Notes App",
+//     category: "Full Stack",
+//     description:
+//       "A simple and aesthetic notes app that allows users to create, edit, and delete notes. Using the cool features of JavaScript to make it happen while using HTML and CSS to make it interactive for user.",
+//     stack: ["HTML", "CSS", "JavaScript"],
+//     image: project1,
+//     githubUrl: "https://github.com/Zeeshan Elahi-tech/Notes-App",
+//   },
+//   {
+//     id: "02",
+//     title: "Analog Clock",
+//     category: "Full Stack",
+//     description:
+//       "A simple and clean analogue clock that displays the current time. Using mathematical formula to measure the actual time but making it happen through JS, design provided by CSS.",
+//     stack: ["HTML", "CSS", "JavaScript"],
+//     image: project2,
+//     githubUrl: "https://github.com/Zeeshan Elahi-tech/Analog-Clock",
+//   },
+//   {
+//     id: "03",
+//     title: "Weather App",
+//     category: "Full Stack",
+//     description:
+//       "Weather app that allows users to search for the weather of any city in the world. Huge role of API and functionality of JavaScript combined with the beauty oh HTML and CSS. ",
+//     stack: ["HTML", "CSS", "JavaScript", "API"],
+//     image: project3,
+//     githubUrl: "https://github.com/Zeeshan Elahi-tech/Weather-App",
+//   },
+//   {
+//     id: "04",
+//     title: "Calculator App",
+//     category: "Full Stack",
+//     description:
+//       "A simple and clean calculator app that performs basic arithmetic operations on interger as well as floating point numbers.",
+//     stack: ["HTML", "CSS", "JavaScript"],
+//     image: project4,
+//     githubUrl: "https://github.com/Zeeshan Elahi-tech/Calculator",
+//   },
+// ];
 
 const ProjectPage = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const handleSlideChange = (index: number) => {
-    setCurrentIndex(index);
-  };
+  // const [currentIndex, setCurrentIndex] = useState(0);
+  // const handleSlideChange = (index: number) => {
+  //   setCurrentIndex(index);
+  // };
   return (
     <div className="py-6 md:py-12">
       <PageLayout>
-        <Carousel
+        <div className="flex justify-center items-center h-[50vh]">
+          <h2 className="text-3xl md:text-5xl font-bold text-lightSky">
+            🚧 Projects Coming Soon...
+          </h2>
+        </div>
+
+        {/* <Carousel
           opts={{ align: "start", loop: true }}
           className="w-full"
           onSelect={() => {
@@ -95,7 +101,6 @@ const ProjectPage = () => {
                 <Card className="bg-bodyColor border-lightSky/20 hover:border-lightSky/30">
                   <CardContent className="p-6">
                     <div className="flex flex-col md:flex-row md:items-center md:space-x-8 group">
-                      {/* description */}
                       <div className="w-full md:w-1/2 order-2 md:order-1 mb-8 md:mb-0">
                         <div className="space-y-3 md:space-y-6 mt-4 md:mt-0">
                           <div>
@@ -144,7 +149,6 @@ const ProjectPage = () => {
                           </div>
                         </div>
                       </div>
-                      {/* image */}
 
                       <div className="w-full md:w-1/2 order-1 md:order-2 ">
                         <div className="relative h-64  md:h-96 bg-gray-700 rounded-lg overflow-hidden">
@@ -174,7 +178,7 @@ const ProjectPage = () => {
             hover:border-hoverColor/80 
             hoverEffect hover:text-white p-5"/>
           </div>
-        </Carousel>
+        </Carousel> */}
       </PageLayout>
     </div>
   );

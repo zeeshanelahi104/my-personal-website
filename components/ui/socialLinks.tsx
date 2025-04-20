@@ -7,27 +7,28 @@ const socialData = [
   {
     title: "Github",
     icon: <Github />,
-    href: "https://github.com/Memoona-tech",
+    href: "https://github.com/zeeshanelahi104",
   },
   {
     title: "LinkedIn",
     icon: <Linkedin />,
-    href: "https://www.linkedin.com/in/memoonasaleem/",
+    href: "https://www.linkedin.com/in/zeeshan-elahi-818zl942",
+    
   },
   {
       title: "Email",
       icon: <Mail/>,
-      href: "mailto:cuteskiesquery@gmail.com",
+      href: "mailto:zeeshanelahi104@gmail.com",
     },
   {
     title: "YouTube",
     icon: <Youtube />,
-    href: "https://www.youtube.com/@SkyCarly",
+    href: "https://www.youtube.com/@zeeshanelahi6390",
   },
   {
     title: "Instagram",
     icon: <Instagram />,
-    href: "https://www.instagram.com",
+    href: "https://www.instagram.com/zeeshanelahi104",
   },
   
 ];
