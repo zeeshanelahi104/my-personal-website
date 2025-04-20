@@ -46,7 +46,7 @@ const Navbar = () => {
               <div>
                 <img className="w-32" src={logo} alt="logo" />
                 <p className="text-sm text-gray-400 mt-2">
-                  As a front-end specialist and MERN stack developer, I'm
+                  As a front-end specialist and MERN stack developer, I&apos;m
                   skilled in bringing designs to life with captivating
                   animations, enriching digital interactions. My focus goes
                   beyond aesthetics—I leverage animations to streamline
