@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jetbrains.variable} antialiased text-white`}>
+      <body className={`${jetbrains.variable} antialiased text-white bg-bodyColor`}>
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>

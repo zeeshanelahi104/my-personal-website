@@ -88,7 +88,7 @@
   }
 
   body {
-    background-color: hsl(var(--bodyColor)); /* Changed from @apply bg-bodyColor */
+    background-color: hsl(var(--bodyColor));
     color: hsl(var(--foreground));
     font-family: var(--font-primary);
   }

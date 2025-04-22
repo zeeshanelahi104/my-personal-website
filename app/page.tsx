@@ -10,7 +10,7 @@ import { Download } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="bg-bodyColor text-white/80 relative">
+    <div className="text-white/80 relative">
       <Container className="py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left Section */}
         <div className="flex flex-col items-center md:items-start gap-3 md:gap-7 text-center md:text-start">
