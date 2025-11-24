@@ -8,7 +8,7 @@ const Hero = () => {
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="container mx-auto px-4 py-5 relative z-1">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left: Text Content */}
           <div className="flex-1 space-y-6 text-center lg:text-left">

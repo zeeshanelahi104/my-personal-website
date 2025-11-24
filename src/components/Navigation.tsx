@@ -123,10 +123,10 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all shadow-md duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all shadow-md duration-300 bg-white ${
         isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-md"
-          : "bg-transparent"
+          : "bg-white"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -171,8 +171,8 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="bg-white hover:bg-primary text-black hover:text-white md:hidden shadow-sm"
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
           </Button>

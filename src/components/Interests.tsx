@@ -31,7 +31,7 @@ const interests = [
 
 const Interests = () => {
   return (
-    <section id="interests" className="py-20 bg-background">
+    <section id="interests" className="py-5 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center animate-fade-in">

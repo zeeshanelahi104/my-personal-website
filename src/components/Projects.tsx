@@ -126,7 +126,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-gradient-secondary">
+    <section id="projects" className="py-5 bg-gradient-secondary">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-12 animate-fade-in">

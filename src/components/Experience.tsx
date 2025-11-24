@@ -41,7 +41,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-gradient-secondary">
+    <section id="experience" className="py-5 bg-gradient-secondary">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-12 animate-fade-in">
