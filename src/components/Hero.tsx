@@ -129,7 +129,7 @@ const Hero = () => {
               {/* Image Container */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/25 shadow-2xl">
                 <img
-                  src="/public/images/profileImage.png"
+                  src="/images/profileImage.png"
                   alt="Zeeshan Elahi"
                   className="w-full h-full object-cover"
                 />
