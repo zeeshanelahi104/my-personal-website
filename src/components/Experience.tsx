@@ -12,8 +12,8 @@ const experiences = [
       "Engineered and delivered 15+ custom marketplace application pages for Real Estate, Zillow, and Bytemine",
       "Mastered the GoHighLevel (GHL) ecosystem, implementing nearly 120+ API endpoints",
       "Developed 10+ reusable widgets (Review Carousel, Store Locator, Content Grid) for the GHL platform",
-      "Built 10+ custom utility tools with React frontends and Node.js/Express backends"
-    ]
+      "Built 10+ custom utility tools with React frontends and Node.js/Express backends",
+    ],
   },
   {
     title: "Junior MERN Stack Developer",
@@ -24,9 +24,19 @@ const experiences = [
       "Implemented RESTful APIs and integrated third-party services",
       "Collaborated with cross-functional teams to deliver high-quality software solutions on time",
       "Conducted code reviews and optimized application performance",
-      "Participated in all phases of the software development lifecycle"
-    ]
-  }
+      "Participated in all phases of the software development lifecycle",
+    ],
+  },
+  {
+    title: "Web Developer (Intern)",
+    company: "V3 Solution",
+    period: "During Internship",
+    achievements: [
+      "Gained practical experience in HTML, CSS, JavaScript, and React.js",
+      "Contributed to UI components and responsive layouts under mentorship",
+      "Strengthened understanding of modern web standards and Git workflows",
+    ],
+  },
 ];
 
 const Experience = () => {
@@ -41,18 +51,25 @@ const Experience = () => {
 
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="shadow-card hover:shadow-glow transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <CardHeader>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                     <div>
-                      <CardTitle className="text-2xl mb-2">{exp.title}</CardTitle>
-                      <p className="text-lg text-muted-foreground">{exp.company}</p>
+                      <CardTitle className="text-2xl mb-2">
+                        {exp.title}
+                      </CardTitle>
+                      <p className="text-lg text-muted-foreground">
+                        {exp.company}
+                      </p>
                     </div>
-                    <Badge variant="secondary" className="flex items-center gap-2 w-fit">
+                    <Badge
+                      variant="secondary"
+                      className="flex items-center gap-2 w-fit"
+                    >
                       <Calendar className="w-4 h-4" />
                       {exp.period}
                     </Badge>
@@ -63,7 +80,9 @@ const Experience = () => {
                     {exp.achievements.map((achievement, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <span className="text-primary mt-1">▹</span>
-                        <span className="text-muted-foreground">{achievement}</span>
+                        <span className="text-muted-foreground">
+                          {achievement}
+                        </span>
                       </li>
                     ))}
                   </ul>
