@@ -18,7 +18,7 @@ const experiences = [
   {
     title: "Junior MERN Stack Developer",
     company: "V3 Solution",
-    period: "Sep 2023 – Sep 2024",
+    period: "Nov 2023 – Sep 2024",
     achievements: [
       "Designed and developed scalable, high-performance web applications using the MERN stack",
       "Implemented RESTful APIs and integrated third-party services",
