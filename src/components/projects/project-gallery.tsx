@@ -51,7 +51,7 @@ export const ProjectGallery = ({
         setError(null);
 
         try {
-            const url = fetchUrl || `http://localhost:5000/api/media/${projectId}`;
+            const url = fetchUrl || `https://zeeshan-elahi.vercel.app/api/media/${projectId}`;
             console.log(`Fetching media from: ${url}`);
 
             const response = await fetch(url);

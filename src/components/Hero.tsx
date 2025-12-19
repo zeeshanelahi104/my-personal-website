@@ -56,9 +56,11 @@ const Hero = () => {
             </div>
 
             <p className="text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
-              Crafting exceptional digital experiences through the <span className="text-foreground font-medium">MERN Stack</span>.
-              Focused on building scalable, user-centric applications with a human-centered approach.
+              Software Engineer with <span className="text-foreground font-medium">2+ years of experience</span> in
+              <span className="text-foreground font-medium"> MERN Stack</span> development, crafting scalable and
+              user-centric web applications with a focus on clean architecture and performance.
             </p>
+
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 pt-4">
               <Button size="lg" className="h-14 px-8 text-lg rounded-full group" asChild>
