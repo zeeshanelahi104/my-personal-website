@@ -533,14 +533,11 @@ const Projects = () => {
                         </Badge>
                       </CardHeader>
 
-                      {/* Card Content */}
                       <CardContent className="p-0 flex flex-col h-full">
-                        {/* Description */}
                         <p className="text-muted-foreground mb-3 sm:mb-4 text-xs sm:text-sm flex-grow leading-relaxed line-clamp-3">
                           {project.description}
                         </p>
 
-                        {/* Tech Stack */}
                         <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                           {project.tech.slice(0, 4).map((tech, i) => (
                             <Badge
@@ -567,7 +564,6 @@ const Projects = () => {
                           )}
                         </div>
 
-                        {/* Media Slider Directly in Card */}
                         <div className="mb-4 rounded-2xl overflow-hidden border border-white/5 shadow-inner">
                           {isLoading ? (
                             <div className="aspect-video bg-muted/20 flex flex-col items-center justify-center gap-3">
@@ -591,9 +587,7 @@ const Projects = () => {
                           )}
                         </div>
 
-                        {/* Action Buttons */}
                         <div className="mt-auto pt-3 sm:pt-4 flex items-center gap-3">
-                          {/* Live Demo Button */}
                           {project.link && (
                             <Button
                               variant="default"
@@ -616,7 +610,6 @@ const Projects = () => {
                             </Button>
                           )}
 
-                          {/* Private Project Indicator */}
                           {project.type === "private" && (
                             <div className="flex-1 text-center p-2.5 bg-muted/50 rounded-xl border border-white/5">
                               <p className="text-[10px] sm:text-xs text-muted-foreground flex items-center justify-center gap-1.5 uppercase tracking-wider font-semibold">
@@ -640,8 +633,7 @@ const Projects = () => {
               })}
             </div>
 
-            {/* View More Button */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -656,7 +648,7 @@ const Projects = () => {
                 View All Projects
                 <ExternalLink className="w-4 h-4 ml-2" />
               </Button>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </AuroraBackground>
