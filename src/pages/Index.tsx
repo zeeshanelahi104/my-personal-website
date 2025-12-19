@@ -9,9 +9,16 @@ import Interests from "@/components/Interests";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
+import { ScrollToTop } from "@/components/ScrollToTop";
+
+import { MeshGradient } from "@/components/ui/mesh-gradient";
+
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <div className="fixed inset-0 z-[-1]">
+        <MeshGradient />
+      </div>
       <Navigation />
       <Hero />
       <About />
@@ -22,6 +29,7 @@ const Index = () => {
       <Interests />
       <Contact />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

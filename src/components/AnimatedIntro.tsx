@@ -19,7 +19,7 @@ export default function AnimatedIntro() {
     if (currentTextIndex >= texts.length) return;
 
     const currentString = texts[currentTextIndex];
-    console.log({ currentString, currentIndex, isDeleting });
+    // console.log({ currentString, currentIndex, isDeleting });
     if (!isDeleting) {
       // Typing forward
       if (currentIndex < currentString.length) {

@@ -1,7 +1,6 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { CardContent } from "@/components/ui/card";
 import { Code2, Code } from "lucide-react";
-import { 
+import {
   SiJavascript, SiTypescript, SiPython, SiCplusplus, SiSharp, SiPhp,
   SiReact, SiNextdotjs, SiNodedotjs, SiExpress, SiHtml5, SiCss3,
   SiTailwindcss, SiBootstrap, SiGraphql, SiPostgresql,
@@ -9,6 +8,9 @@ import {
   SiGit, SiGithub, SiFigma, SiCanva, SiTableau, SiPostman,
   SiVercel, SiRender, SiAmazon
 } from "react-icons/si";
+import { motion } from "framer-motion";
+import { CardSpotlight } from "@/components/ui/card-spotlight";
+import { SparklesCore } from "@/components/ui/sparkles";
 
 const skillCategories = [
   {
@@ -67,84 +69,119 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-5 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="skills" className="relative py-20 overflow-hidden bg-background">
+      <div className="absolute inset-0 w-full h-full">
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="#10b981"
+        />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-3 mb-12 animate-fade-in">
-            <Code2 className="w-8 h-8 text-primary" />
-            <h2 className="text-4xl font-bold">Technical Skills</h2>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-3 mb-12"
+          >
+            <div className="p-3 rounded-xl bg-primary/10 text-primary">
+              <Code2 className="w-8 h-8" />
+            </div>
+            <h2 className="text-4xl font-bold tracking-tight font-heading">
+              Technical <span className="text-gradient">Skills</span>
+            </h2>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {skillCategories.map((category, index) => (
-              <Card 
+              <motion.div
                 key={index}
-                className="shadow-card hover:shadow-glow transition-all duration-300 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group/card"
               >
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-6 text-primary">{category.title}</h3>
-                  
-                  {category.skills && (
-                    <div className="space-y-6">
-                      {category.skills.map((skill, i) => (
-                        <div key={i}>
-                          <div className="flex items-center justify-between mb-3">
-                            <div className="flex items-center gap-3">
-                              <skill.Icon 
-                                className="w-10 h-10 transition-transform hover:scale-110" 
-                                style={{ color: skill.color }}
-                              />
-                              <span className="font-medium text-lg">{skill.name}</span>
+                <CardSpotlight
+                  className="w-full h-full p-6 sm:p-8"
+                  containerClassName="bg-card/40 backdrop-blur-xl border-white/10 hover:border-primary/40 rounded-3xl transition-all duration-500 shadow-xl"
+                  spotlightColor="rgba(99, 102, 241, 0.2)"
+                >
+                  <CardContent className="p-0">
+                    <h3 className="text-2xl font-bold mb-8 text-primary font-heading tracking-wide uppercase text-xs">{category.title}</h3>
+
+                    {category.skills && (
+                      <div className="space-y-6">
+                        {category.skills.map((skill, i) => (
+                          <div key={i}>
+                            <div className="flex items-center justify-between mb-3">
+                              <div className="flex items-center gap-3">
+                                <skill.Icon
+                                  className="w-8 h-8 transition-transform hover:scale-110"
+                                  style={{ color: skill.color }}
+                                />
+                                <span className="font-medium text-lg">{skill.name}</span>
+                              </div>
+                              <span className="text-sm font-semibold text-primary">{skill.level}%</span>
                             </div>
-                            <span className="text-sm font-semibold text-primary">{skill.level}%</span>
+                            <div className="h-2 bg-secondary rounded-full overflow-hidden">
+                              <motion.div
+                                className="h-full bg-primary"
+                                initial={{ width: 0 }}
+                                whileInView={{ width: `${skill.level}%` }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 1, delay: 0.5 + (i * 0.1) }}
+                              />
+                            </div>
                           </div>
-                          <div className="h-3 bg-secondary rounded-full overflow-hidden">
-                            <div 
-                              className="h-full bg-gradient-primary rounded-full transition-all duration-1000"
-                              style={{ width: `${skill.level}%` }}
+                        ))}
+                      </div>
+                    )}
+
+                    {category.technologies && (
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        {category.technologies.map((tech, i) => (
+                          <motion.div
+                            key={i}
+                            whileHover={{ scale: 1.05 }}
+                            className="flex flex-col items-center gap-2 p-4 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors duration-300 group border border-primary/10"
+                          >
+                            <tech.Icon
+                              className="w-10 h-10 transition-transform group-hover:scale-110"
+                              style={{ color: tech.color }}
                             />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                            <span className="text-sm font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors">{tech.name}</span>
+                          </motion.div>
+                        ))}
+                      </div>
+                    )}
 
-                  {category.technologies && (
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                      {category.technologies.map((tech, i) => (
-                        <div 
-                          key={i} 
-                          className="flex flex-col items-center gap-2 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-all duration-300 hover:scale-105 group"
-                        >
-                          <tech.Icon 
-                            className="w-12 h-12 transition-transform group-hover:scale-110" 
-                            style={{ color: tech.color }}
-                          />
-                          <span className="text-sm font-medium text-center">{tech.name}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  {category.tools && (
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                      {category.tools.map((tool, i) => (
-                        <div 
-                          key={i} 
-                          className="flex flex-col items-center gap-2 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-all duration-300 hover:scale-105 group"
-                        >
-                          <tool.Icon 
-                            className="w-12 h-12 transition-transform group-hover:scale-110" 
-                            style={{ color: tool.color }}
-                          />
-                          <span className="text-sm font-medium text-center">{tool.name}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
+                    {category.tools && (
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        {category.tools.map((tool, i) => (
+                          <motion.div
+                            key={i}
+                            whileHover={{ scale: 1.05 }}
+                            className="flex flex-col items-center gap-2 p-4 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors duration-300 group border border-primary/10"
+                          >
+                            <tool.Icon
+                              className="w-10 h-10 transition-transform group-hover:scale-110"
+                              style={{ color: tool.color }}
+                            />
+                            <span className="text-sm font-medium text-center text-muted-foreground group-hover:text-foreground transition-colors">{tool.name}</span>
+                          </motion.div>
+                        ))}
+                      </div>
+                    )}
+                  </CardContent>
+                </CardSpotlight>
+              </motion.div>
             ))}
           </div>
         </div>
