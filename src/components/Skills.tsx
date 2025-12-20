@@ -114,7 +114,7 @@ const Skills = () => {
                   spotlightColor="rgba(99, 102, 241, 0.2)"
                 >
                   <CardContent className="p-0">
-                    <h3 className="text-2xl font-bold mb-8 text-primary font-heading tracking-wide uppercase text-xs">{category.title}</h3>
+                    <h3 className="text-2xl font-bold mb-8 text-primary font-heading tracking-wide uppercase">{category.title}</h3>
 
                     {category.skills && (
                       <div className="space-y-6">
@@ -128,7 +128,15 @@ const Skills = () => {
                                 />
                                 <span className="font-medium text-lg">{skill.name}</span>
                               </div>
-                              <span className="text-sm font-semibold text-primary">{skill.level}%</span>
+                              <motion.span
+                                className="text-sm font-semibold text-primary"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: 0.8 + (i * 0.1) }}
+                              >
+                                {skill.level}%
+                              </motion.span>
                             </div>
                             <div className="h-2 bg-secondary rounded-full overflow-hidden">
                               <motion.div

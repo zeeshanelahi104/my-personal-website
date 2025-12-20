@@ -21,7 +21,7 @@ export default function Admin() {
 
   const handleUpload = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!selectedFile || !projectId) {
       toast({
         title: 'Error',
@@ -32,53 +32,60 @@ export default function Admin() {
     }
 
     setIsLoading(true);
-    const formData = new FormData();
-    formData.append('file', selectedFile);
-    formData.append('upload_preset', 'portfolio_media');
-    formData.append('tags', projectId);
 
-    try {
-      const response = await fetch(
-        `https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUDINARY_CLOUD_NAME}/auto/upload`,
-        {
-          method: 'POST',
-          body: formData,
+    // Read file as base64 or send as FormData
+    const reader = new FileReader();
+    reader.readAsDataURL(selectedFile);
+    reader.onloadend = async () => {
+      const base64data = reader.result;
+
+      try {
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL || ''}/api/media/upload`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              file: base64data,
+              projectId: projectId,
+            }),
+          }
+        );
+
+        const data = await response.json();
+
+        if (response.ok && data.url) {
+          setUploadedFiles([...uploadedFiles, data]);
+          setSelectedFile(null);
+          setProjectId('');
+
+          toast({
+            title: 'Success',
+            description: 'File uploaded successfully via backend',
+          });
+
+          // Reset file input
+          const input = document.querySelector('input[type="file"]') as HTMLInputElement;
+          if (input) input.value = '';
+        } else {
+          throw new Error(data.message || 'Upload failed');
         }
-      );
-
-      const data = await response.json();
-
-      if (data.public_id) {
-        setUploadedFiles([...uploadedFiles, data]);
-        setSelectedFile(null);
-        setProjectId('');
-        
+      } catch (error: any) {
+        console.error('Upload error:', error);
         toast({
-          title: 'Success',
-          description: 'File uploaded successfully to Cloudinary',
+          title: 'Error',
+          description: error.message || 'Failed to upload file',
+          variant: 'destructive',
         });
-
-        // Reset file input
-        const input = document.querySelector('input[type="file"]') as HTMLInputElement;
-        if (input) input.value = '';
-      } else {
-        throw new Error('Upload failed');
+      } finally {
+        setIsLoading(false);
       }
-    } catch (error) {
-      console.error('Upload error:', error);
-      toast({
-        title: 'Error',
-        description: 'Failed to upload file',
-        variant: 'destructive',
-      });
-    } finally {
-      setIsLoading(false);
-    }
+    };
   };
 
   const deleteFile = async (publicId: string) => {
     try {
-      const response = await fetch('/api/media/delete', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/media/delete`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ public_id: publicId }),
@@ -137,8 +144,8 @@ export default function Admin() {
                 )}
               </div>
 
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 disabled={isLoading || !selectedFile || !projectId}
                 className="w-full"
               >

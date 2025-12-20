@@ -52,6 +52,35 @@ router.get('/:projectId', async (req, res) => {
     }
 });
 
+// POST /api/media/upload - upload a new file
+router.post('/upload', async (req, res) => {
+    try {
+        const { file, projectId, resource_type = 'auto' } = req.body;
+
+        if (!file || !projectId) {
+            return res.status(400).json({ message: 'file and projectId are required' });
+        }
+
+        console.log(`Uploading media for project: ${projectId}`);
+
+        const result = await cloudinary.uploader.upload(file, {
+            folder: `portfolio/${projectId}`,
+            tags: [projectId, 'portfolio'],
+            resource_type: resource_type,
+        });
+
+        res.json({
+            message: 'Upload successful',
+            public_id: result.public_id,
+            url: result.secure_url,
+            result
+        });
+    } catch (error) {
+        console.error('Error uploading media:', error);
+        res.status(500).json({ message: 'Server Error', error: error.message });
+    }
+});
+
 // POST /api/media/delete - delete by public_id
 router.post('/delete', async (req, res) => {
     try {
