@@ -403,7 +403,7 @@ const Projects = () => {
     setLoadingProjects(prev => [...prev, projectId]);
 
     try {
-      const response = await fetch(`https://zeeshan-elahi.vercel.app/api/media/${projectId}`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/media/${projectId}`);
 
       if (!response.ok) {
         throw new Error(`Failed to fetch media for ${projectId}`);

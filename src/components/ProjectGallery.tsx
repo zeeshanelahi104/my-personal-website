@@ -236,7 +236,6 @@ export const ProjectGallery = ({ projectId, projectTitle }: ProjectGalleryProps)
     const fetchMedia = async () => {
         setLoading(true);
         try {
-            // const response = await fetch(`https://zeeshan-elahi.vercel.app/api/media/${projectId}`);
             const response = await fetch(`${import.meta.env.VITE_API_URL}/api/media/${projectId}`);
             const data = await response.json();
             console.log("Fetched media data:", data);
