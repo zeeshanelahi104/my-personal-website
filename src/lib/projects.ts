@@ -1,3 +1,14 @@
+// export interface Project {
+//     id: string;
+//     title: string;
+//     subtitle: string;
+//     description: string;
+//     tech: string[];
+//     type: "video" | "live" | "private" | "demo";
+//     videoUrl?: string;
+//     link?: string;
+//     category: "Full-Stack" | "Admin Panel" | "Utility" | "Integration" | "Frontend";
+// }
 export interface Project {
     id: string;
     title: string;
@@ -7,9 +18,12 @@ export interface Project {
     type: "video" | "live" | "private" | "demo";
     videoUrl?: string;
     link?: string;
+    credentials?: {
+        email: string;
+        password: string;
+    };
     category: "Full-Stack" | "Admin Panel" | "Utility" | "Integration" | "Frontend";
 }
-
 export const projects: Project[] = [
     {
         id: "yarnwise",
@@ -53,6 +67,16 @@ export const projects: Project[] = [
         type: "private",
         category: "Admin Panel",
     },
+    // {
+    //     id: "chaudhary-enterprises",
+    //     title: "Chaudhary Enterprises",
+    //     subtitle: "Agricultural Inventory",
+    //     description:
+    //         "Next.js inventory system for agricultural products with Redux state management, bilingual support (English/Urdu), and transaction reports.",
+    //     tech: ["Next.js", "Redux Toolkit", "MongoDB", "Tailwind CSS"],
+    //     type: "video",
+    //     category: "Full-Stack",
+    // },
     {
         id: "chaudhary-enterprises",
         title: "Chaudhary Enterprises",
@@ -60,7 +84,12 @@ export const projects: Project[] = [
         description:
             "Next.js inventory system for agricultural products with Redux state management, bilingual support (English/Urdu), and transaction reports.",
         tech: ["Next.js", "Redux Toolkit", "MongoDB", "Tailwind CSS"],
-        type: "video",
+        type: "live", // Changed from "video" to "live" since you now have a link
+        link: "https://chaudhary-enterprises.vercel.app/en", // Added deployed link
+        credentials: { // Added credentials object
+            email: "test123@gmail.com",
+            password: "12345678"
+        },
         category: "Full-Stack",
     },
     {

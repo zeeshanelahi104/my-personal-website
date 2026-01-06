@@ -90,21 +90,18 @@ router.get('/:projectId', async (req, res) => {
     try {
         const { projectId } = req.params;
 
-        if (!process.env.CLOUDINARY_CLOUD_NAME) {
-            throw new Error('CLOUDINARY_CLOUD_NAME is not set');
-        }
-
         const resources = await cloudinary.search
             .expression(`tags:${projectId}`)
             .sort_by('created_at', 'desc')
             .max_results(100)
             .execute();
 
+        // Use the SAME mapping as /api/media/all
         const media = (resources.resources || []).map((resource) => ({
             public_id: resource.public_id,
-            url: resource.secure_url,
+            url: resource.secure_url || resource.url,
             type: resource.resource_type === 'video' || resource.format === 'mp4' ? 'video' : 'image',
-            resource_type: resource.resource_type,
+            resource_type: resource.resource_type, // Add this
             width: resource.width,
             height: resource.height,
             bytes: resource.bytes,
@@ -112,7 +109,7 @@ router.get('/:projectId', async (req, res) => {
             tags: resource.tags || [],
         }));
 
-        res.json(media);
+        res.json(media); // Now returns same structure as /api/media/all
     } catch (error) {
         console.error('Fetch Project Media Error:', error);
         res.status(500).json({ message: 'Server Error', error: error.message });
