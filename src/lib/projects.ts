@@ -1,14 +1,3 @@
-// export interface Project {
-//     id: string;
-//     title: string;
-//     subtitle: string;
-//     description: string;
-//     tech: string[];
-//     type: "video" | "live" | "private" | "demo";
-//     videoUrl?: string;
-//     link?: string;
-//     category: "Full-Stack" | "Admin Panel" | "Utility" | "Integration" | "Frontend";
-// }
 export interface Project {
     id: string;
     title: string;
@@ -24,6 +13,7 @@ export interface Project {
     };
     category: "Full-Stack" | "Admin Panel" | "Utility" | "Integration" | "Frontend";
 }
+
 export const projects: Project[] = [
     {
         id: "yarnwise",
@@ -67,16 +57,6 @@ export const projects: Project[] = [
         type: "private",
         category: "Admin Panel",
     },
-    // {
-    //     id: "chaudhary-enterprises",
-    //     title: "Chaudhary Enterprises",
-    //     subtitle: "Agricultural Inventory",
-    //     description:
-    //         "Next.js inventory system for agricultural products with Redux state management, bilingual support (English/Urdu), and transaction reports.",
-    //     tech: ["Next.js", "Redux Toolkit", "MongoDB", "Tailwind CSS"],
-    //     type: "video",
-    //     category: "Full-Stack",
-    // },
     {
         id: "chaudhary-enterprises",
         title: "Chaudhary Enterprises",
@@ -84,9 +64,9 @@ export const projects: Project[] = [
         description:
             "Next.js inventory system for agricultural products with Redux state management, bilingual support (English/Urdu), and transaction reports.",
         tech: ["Next.js", "Redux Toolkit", "MongoDB", "Tailwind CSS"],
-        type: "live", // Changed from "video" to "live" since you now have a link
-        link: "https://chaudhary-enterprises.vercel.app/en", // Added deployed link
-        credentials: { // Added credentials object
+        type: "live",
+        link: "https://chaudhary-enterprises.vercel.app/en",
+        credentials: {
             email: "test123@gmail.com",
             password: "12345678"
         },
@@ -133,4 +113,82 @@ export const projects: Project[] = [
         type: "live",
         category: "Frontend",
     },
+    // New projects start here
+    {
+        id: "elegbe",
+        title: "Elegbe Professional Services",
+        subtitle: "Business Solutions Platform",
+        description:
+            "Professional services website built with Next.js featuring service listings, client testimonials, and contact management systems.",
+        tech: ["Next.js", "Tailwind CSS", "MongoDB", "Node.js"],
+        link: "https://elegbe.net",
+        type: "live",
+        category: "Full-Stack",
+    },
+    {
+        id: "glacier-luxury",
+        title: "Glacier Luxury Retreat",
+        subtitle: "Premium Hotel Booking System",
+        description:
+            "Luxury hotel booking platform with room reservations, payment integration, and admin dashboard for booking management.",
+        tech: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS", "Stripe"],
+        link: "https://glacierluxuryretreat.com",
+        type: "live",
+        category: "Full-Stack",
+    },
+    {
+        id: "laptop-king",
+        title: "Laptop King",
+        subtitle: "E-commerce for Laptops",
+        description:
+            "Full-featured laptop e-commerce store with product filtering, shopping cart, user reviews, and order tracking system.",
+        tech: ["Next.js", "MongoDB", "Node.js", "Tailwind CSS", "Redux"],
+        link: "https://laptopking.vercel.app",
+        type: "live",
+        category: "Full-Stack",
+    },
+    {
+        id: "epc-trade",
+        title: "EPC Trade Platform",
+        subtitle: "Energy Trading Portal",
+        description:
+            "Energy Performance Certificate trading platform with document management, user verification, and marketplace features.",
+        tech: ["Next.js", "MongoDB", "Node.js", "Tailwind CSS", "Firebase"],
+        link: "https://epctrade.com",
+        type: "live",
+        category: "Full-Stack",
+    },
+    {
+        id: "thrift-marketplace",
+        title: "Thrift Marketplace",
+        subtitle: "Sustainable Shopping Platform",
+        description:
+            "Second-hand goods marketplace with user profiles, product listings, messaging system, and secure transactions.",
+        tech: ["Next.js", "MongoDB", "Node.js", "Tailwind CSS", "Socket.io"],
+        link: "https://thriftmarketplace.vercel.app",
+        type: "live",
+        category: "Full-Stack",
+    },
+    {
+        id: "gt-western",
+        title: "GT Western",
+        subtitle: "Automotive Services Portal",
+        description:
+            "Automotive services website with appointment booking, service tracking, customer management, and service history.",
+        tech: ["Next.js", "MongoDB", "Node.js", "Tailwind CSS"],
+        link: "https://gtwestern.com",
+        type: "live",
+        category: "Full-Stack",
+    },
+    {
+        id: "kickstarter-clone",
+        title: "Crowdfunding Platform",
+        subtitle: "Kickstarter Clone",
+        description:
+            "Full-featured crowdfunding platform with project creation, backer rewards, payment integration, and progress tracking.",
+        tech: ["Next.js", "MongoDB", "Node.js", "Tailwind CSS", "Stripe"],
+        link: "https://kickstarter-clone-eight.vercel.app",
+        type: "live",
+        category: "Full-Stack",
+    }
 ];

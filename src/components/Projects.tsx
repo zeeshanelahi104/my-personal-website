@@ -93,7 +93,7 @@ const Projects = () => {
                 <FolderGit2 className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
               <div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight font-heading">
+                <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground font-heading">
                   Featured <span className="text-gradient-reverse">Projects</span>
                 </h2>
                 <p className="text-muted-foreground mt-1 sm:mt-2 text-sm sm:text-base">

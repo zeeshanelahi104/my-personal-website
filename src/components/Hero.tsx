@@ -7,7 +7,7 @@ import { Vortex } from "@/components/ui/vortex";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background px-10">
       <div className="absolute inset-0 z-0">
         <Vortex
           backgroundColor="transparent"
@@ -19,7 +19,7 @@ const Hero = () => {
       </div>
       <MeshGradient />
 
-      <div className="container mx-auto px-4 relative z-10 pt-20">
+      <div className="container mx-auto relative z-10 pt-20">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           {/* Left: Text Content */}
           <motion.div
@@ -105,7 +105,7 @@ const Hero = () => {
             transition={{ duration: 1, ease: "circOut" }}
             className="relative lg:w-1/2 flex justify-center lg:justify-end"
           >
-            <div className="relative w-72 h-72 md:w-96 md:h-96">
+            <div className="relative w-72 h-72 md:w-96 md:h-96 mb-10">
               {/* Decorative elements */}
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-[40px] rotate-6 blur-2xl animate-pulse-slow" />
               <div className="absolute inset-0 bg-gradient-to-bl from-accent/20 to-primary/20 rounded-[40px] -rotate-6 blur-2xl animate-pulse" />

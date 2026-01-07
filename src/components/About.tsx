@@ -58,7 +58,7 @@ const About = () => {
                 <div className="w-full md:w-1/3 flex flex-col gap-4">
                   {[
                     { label: "Experience", value: "2+ Years" },
-                    { label: "Education", value: "BSCS Graduate" },
+                    { label: "Education", value: "BSSE Graduate" },
                     { label: "Status", value: "Active" }
                   ].map((stat, i) => (
                     <div key={i} className="p-4 rounded-2xl bg-primary/5 border border-primary/10">
