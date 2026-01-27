@@ -121,7 +121,7 @@ const Projects = () => {
                       ease: "easeOut"
                     }}
                     className="h-full group/card"
-                    onMouseEnter={() => !mediaCache[project.id] && fetchProjectMedia(project.id)}
+                    onViewportEnter={() => !mediaCache[project.id] && fetchProjectMedia(project.id)}
                   >
                     <CardSpotlight
                       className="w-full h-full p-4 sm:p-6 flex flex-col relative z-20"
