@@ -56,7 +56,7 @@
               </div>
 
               <p className="text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
-                Software Engineer with <span className="text-foreground font-medium">2+ years of experience</span> in
+                Software Engineer with <span className="text-foreground font-medium">3 years of experience</span> in
                 <span className="text-foreground font-medium"> MERN Stack</span> development, crafting scalable and
                 user-centric web applications with a focus on clean architecture and performance.
               </p>

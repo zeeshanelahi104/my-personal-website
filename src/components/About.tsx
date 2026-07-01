@@ -40,7 +40,7 @@ const About = () => {
               <div className="flex flex-col md:flex-row gap-8 items-start">
                 <div className="flex-1 space-y-6">
                   <p className="text-xl text-muted-foreground leading-relaxed font-light">
-                    Software Engineer with <span className="text-foreground font-semibold">2+ years of professional experience</span> as a MERN Stack Developer.
+                    Software Engineer with <span className="text-foreground font-semibold">3 years of professional experience</span> as a MERN Stack Developer.
                   </p>
                   <p className="text-lg text-muted-foreground/80 leading-relaxed">
                     I specialize in architecting high-performance digital solutions using
@@ -57,7 +57,7 @@ const About = () => {
                 </div>
                 <div className="w-full md:w-1/3 flex flex-col gap-4">
                   {[
-                    { label: "Experience", value: "2+ Years" },
+                    { label: "Experience", value: "3 Years" },
                     { label: "Education", value: "BSSE Graduate" },
                     { label: "Status", value: "Active" }
                   ].map((stat, i) => (
